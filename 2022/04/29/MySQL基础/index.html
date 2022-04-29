@@ -4,8 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="Hexo">
+    <meta name="description" content="MySQL基础一、DDL1.1数据库操作查询所有数据库
+1show databases;
+
+查询当前数据库
+1select database();
+
+创建数据库
+1create database [if not exists] 数据库名 [">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +26,7 @@
 
     
 
-    <title>Hello World | Hexo</title>
+    <title>Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
@@ -309,12 +316,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -442,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-04-28
+                    2022-04-29
                 </div>
                 
 
@@ -463,19 +470,347 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h2 id="MySQL基础"><a href="#MySQL基础" class="headerlink" title="MySQL基础"></a>MySQL基础</h2><h4 id="一、DDL"><a href="#一、DDL" class="headerlink" title="一、DDL"></a>一、DDL</h4><h5 id="1-1数据库操作"><a href="#1-1数据库操作" class="headerlink" title="1.1数据库操作"></a>1.1数据库操作</h5><p>查询所有数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show databases;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>查询当前数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select database();</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>创建数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create database [if not exists] 数据库名 [deafult charset 字符集][collate 排序规则];</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>使用数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use 数据库名;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>删除数据库</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop database [if exists] 数据库名;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-2表操作"><a href="#1-2表操作" class="headerlink" title="1.2表操作"></a>1.2表操作</h5><ul>
+<li>查询表</li>
+</ul>
+<p>查询当前数据库所有表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show tables;</span><br></pre></td></tr></table></figure>
+
+<p>查询表结构</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">desc 表名；</span><br></pre></td></tr></table></figure>
+
+<p>查询指定表的建表语句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show create table 表名；</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create table 表名(  字段1 字段1类型 [comment 字段1注释],  字段2 字段2类型 [comment 字段2注释],  字段3 字段3类型 [comment 字段3注释],  ···  字段n 字段n类型 [comment 字段n注释])[comment 表注释];</span><br></pre></td></tr></table></figure>
+
+<p>补充：数据类型</p>
+<p>数值类型，主要使用int</p>
+<p>字符串类型，定长字符串char，变长字符串varchar，长文本数据text</p>
+<p>日期类型，date日期值，time时间值，year年份值</p>
+<ul>
+<li>修改表</li>
+</ul>
+<p>添加字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add 字段名 类型(长度) [comment 注释] [约束];</span><br></pre></td></tr></table></figure>
+
+<p>修改数据类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 modify 字段名 新数据类型(长度);</span><br></pre></td></tr></table></figure>
+
+<p>修改字段名和数据类型</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 change 旧字段名 新字段名 类型(长度)[comment 注释][约束];</span><br></pre></td></tr></table></figure>
+
+<p>删除字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 drop 字段名;</span><br></pre></td></tr></table></figure>
+
+<p>修改表名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 rename to 新表名;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除表</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop table [if exists] 表名;</span><br></pre></td></tr></table></figure>
+
+<p>删除指定表，并重新创建空表</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">truncate table 表名;</span><br></pre></td></tr></table></figure>
+
+<h4 id="二、DML"><a href="#二、DML" class="headerlink" title="二、DML"></a>二、DML</h4><p>对数据库中表的数据进行增删改操作</p>
+<p>insert(添加数据)</p>
+<p>update(修改数据)</p>
+<p>delete(删除数据)</p>
+<h5 id="2-1添加数据"><a href="#2-1添加数据" class="headerlink" title="2.1添加数据"></a>2.1添加数据</h5><p>给指定字段添加数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段1，字段2，···) values(值1，值2，···);</span><br></pre></td></tr></table></figure>
+
+<p>给全部字段添加数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名 values(值1，值2，值3，···);</span><br></pre></td></tr></table></figure>
+
+<p>批量添加数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名(字段1，字段2，···) values(值1，值2，···),(值1，值2，···),(值1，值2，···);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">insert into 表名 values(值1，值2，值3，···),(值1，值2，值3，···),(值1，值2，值3，···);</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-2修改数据"><a href="#2-2修改数据" class="headerlink" title="2.2修改数据"></a>2.2修改数据</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update 表名 set 字段名1=值1,字段名2=值2,···[where 条件];</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-3删除数据"><a href="#2-3删除数据" class="headerlink" title="2.3删除数据"></a>2.3删除数据</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">delete form 表名 [where 条件];</span><br></pre></td></tr></table></figure>
+
+<h4 id="三、DQL"><a href="#三、DQL" class="headerlink" title="三、DQL"></a>三、DQL</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 	字段列表from 	表名列表where 	条件列表group by 	分组字段列表having 	分组后条件列表order by 	排序字段列表limit 	分页参数</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-1基础查询"><a href="#3-1基础查询" class="headerlink" title="3.1基础查询"></a>3.1基础查询</h5><ul>
+<li>查询多个字段</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段1，字段2，字段3，···from	表名；</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from 表名;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>设置别名</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段1 [as 别名1]from 表名;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>去除重复记录</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select distinct 字段列表from 表名;</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-2条件查询"><a href="#3-2条件查询" class="headerlink" title="3.2条件查询"></a>3.2条件查询</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段列表from 表名where 条件列表;</span><br></pre></td></tr></table></figure>
+
+<p>条件列表：比较运算符和逻辑运算符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;  &gt;=&lt;  &lt;==  != &lt;&gt;between ··· and ···	在某个范围之内in(...)			多选一like 占位符     (_匹配单个字符，%匹配多个字符)is null 		是null</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">and 	&amp;&amp;or 		||not 	!</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-3聚合函数"><a href="#3-3聚合函数" class="headerlink" title="3.3聚合函数"></a>3.3聚合函数</h5><p>将一列数据作为一个整体，进行纵向计算。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 聚合函数(字段列表) from 表名;#null值不参与聚合函数计算</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">常见聚合函数count()max()min()avg()sum()</span><br></pre></td></tr></table></figure>
+
+<h5 id="3-4分组查询"><a href="#3-4分组查询" class="headerlink" title="3.4分组查询"></a>3.4分组查询</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段列表from 表名[where 条件]group by 分组字段名[having 分组后过滤条件]</span><br></pre></td></tr></table></figure>
+
+<!--where和having的区别是什么？-->
+
+<blockquote>
+<p>where是分组之前进行过滤，不满足where条件，不参与分组；having是分组之后对结果进行过滤；</p>
+<p>where不能对聚合函数进行判断，而having可以。</p>
+</blockquote>
+<p>执行顺序：where &gt; 聚合函数 &gt; having</p>
+<h5 id="3-5排序查询"><a href="#3-5排序查询" class="headerlink" title="3.5排序查询"></a>3.5排序查询</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段列表from 表名order by 字段1 排序方式1，字段2 排序方式2;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>ASC：升序(默认)</p>
+<p>DESC：降序</p>
+</blockquote>
+<h5 id="3-6分页查询"><a href="#3-6分页查询" class="headerlink" title="3.6分页查询"></a>3.6分页查询</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段列表from 表名limit 起始索引，查询记录数;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>起始索引从0开始，起始索引 &#x3D; (查询页码 - 1)*每页显示的记录数</p>
+</blockquote>
+<h5 id="3-7执行顺序"><a href="#3-7执行顺序" class="headerlink" title="3.7执行顺序"></a>3.7执行顺序</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 			④	字段列表from 			①	表名列表where 			②	条件列表group by 		③	分组字段列表having 	分组后条件列表order by 		⑤	排序字段列表limit 			⑥	分页参数</span><br></pre></td></tr></table></figure>
+
+<h4 id="四、DCL"><a href="#四、DCL" class="headerlink" title="四、DCL"></a>四、DCL</h4><p>用来管理数据库用户、控制数据库的访问权限</p>
+<h5 id="4-1管理用户"><a href="#4-1管理用户" class="headerlink" title="4.1管理用户"></a>4.1管理用户</h5><p>(1)查询用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use user;select * from user;</span><br></pre></td></tr></table></figure>
+
+<p>(2)创建用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">create user &#x27;用户名&#x27;@&#x27;主机名&#x27; identified by &#x27;密码&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>(3)修改用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter user &#x27;用户名&#x27;@&#x27;主机名&#x27; identified with mysql_native_password by &#x27;新密码&#x27;;</span><br></pre></td></tr></table></figure>
+
+<p>(4)删除用户</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">drop user  &#x27;用户名&#x27;@&#x27;主机名&#x27;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>创建用户的时候主机名可以使用%，表示任意主机都可以。</p>
+<p>这部分操作开发人员使用的比较少，主要是DBA使用。</p>
+</blockquote>
+<h5 id="4-2权限控制"><a href="#4-2权限控制" class="headerlink" title="4.2权限控制"></a>4.2权限控制</h5><p>查询权限</p>
+<p>授予权限</p>
+<p>撤销权限</p>
+<h4 id="五、函数"><a href="#五、函数" class="headerlink" title="五、函数"></a>五、函数</h4><h5 id="5-1字符串函数"><a href="#5-1字符串函数" class="headerlink" title="5.1字符串函数"></a>5.1字符串函数</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">concat(s1,s2,s3···sn)lower(str)upper(str)lpad(str,n,pad)		#左填充，用pad对字符串左边进行填充，长度达到nrpad(str,n,pad)		#右填充trim(str)substring(str,start,len)</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-2数值函数"><a href="#5-2数值函数" class="headerlink" title="5.2数值函数"></a>5.2数值函数</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ceil(x)		#向上取整floor(x)	#向下取整mod(x,y)	#返回x/y的模rand()		#返回0~1内的随机数round(x,y)	#求参数x的四舍五入的值，保留y位小数</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-3日期函数"><a href="#5-3日期函数" class="headerlink" title="5.3日期函数"></a>5.3日期函数</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curdate()curtime()now()year(date)month(date)day(date)date_add(date,interval expr type)datediff(date1,date2)</span><br></pre></td></tr></table></figure>
+
+<h5 id="5-4流程函数"><a href="#5-4流程函数" class="headerlink" title="5.4流程函数"></a>5.4流程函数</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if(value,t,f)ifnull(value1,value2)case when [val1] then [res1] ···else[deafult] endcase [expr] when [val1] then [res1] ···else[deafult] end</span><br></pre></td></tr></table></figure>
+
+<h4 id="六、约束"><a href="#六、约束" class="headerlink" title="六、约束"></a>六、约束</h4><h5 id="6-1概念"><a href="#6-1概念" class="headerlink" title="6.1概念"></a>6.1概念</h5><p>作用于表中字段上的规则，用于限制存储在表中的数据。</p>
+<h5 id="6-2常见约束"><a href="#6-2常见约束" class="headerlink" title="6.2常见约束"></a>6.2常见约束</h5><table>
+<thead>
+<tr>
+<th align="center">约束</th>
+<th align="center">描述</th>
+<th align="center">关键字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">非空约束</td>
+<td align="center">限制该字段的数据不能为null</td>
+<td align="center">NOT NULL</td>
+</tr>
+<tr>
+<td align="center">唯一约束</td>
+<td align="center">保证该字段的数据不能重复</td>
+<td align="center">UNIQUE</td>
+</tr>
+<tr>
+<td align="center">主键约束</td>
+<td align="center">主键是一行数据的唯一标识，要求非空且唯一</td>
+<td align="center">PRIMARY KEY</td>
+</tr>
+<tr>
+<td align="center">默认约束</td>
+<td align="center">保存数据时，如果没有指定该字段的值，则使用默认值</td>
+<td align="center">DEAFULT</td>
+</tr>
+<tr>
+<td align="center">检查约束(8.0.16以后)</td>
+<td align="center">保证字段值满足某一条件</td>
+<td align="center">CHECK</td>
+</tr>
+<tr>
+<td align="center">外键约束</td>
+<td align="center">用来让两张表的数据之间建立连接，保证数据的一致性和完整性</td>
+<td align="center">FOREIGN KEY</td>
+</tr>
+</tbody></table>
+<p>可以在创建表&#x2F;修改表的时候添加约束</p>
+<h5 id="6-3添加外键"><a href="#6-3添加外键" class="headerlink" title="6.3添加外键"></a>6.3添加外键</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add constraint 外键名称 foreign key(外键字段名) references 主表(主表字段名); </span><br></pre></td></tr></table></figure>
+
+<h5 id="6-4删除外键"><a href="#6-4删除外键" class="headerlink" title="6.4删除外键"></a>6.4删除外键</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 drop foreign key 外键名称;</span><br></pre></td></tr></table></figure>
+
+<h5 id="6-5删除-x2F-更新行为"><a href="#6-5删除-x2F-更新行为" class="headerlink" title="6.5删除&#x2F;更新行为"></a>6.5删除&#x2F;更新行为</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alter table 表名 add constraint 外键名称 foreign key(外键字段名) references 主表(主表字段名) on update 更新行为 on delete 删除行为;</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="center">行为</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">NO ACTION</td>
+<td align="center">当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除&#x2F;更新。</td>
+</tr>
+<tr>
+<td align="center">RESTRICT</td>
+<td align="center">当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有则不允许删除&#x2F;更新。</td>
+</tr>
+<tr>
+<td align="center">CASCADE</td>
+<td align="center">当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有则也删除&#x2F;更新外键在子表中的记录。</td>
+</tr>
+<tr>
+<td align="center">SET NULL</td>
+<td align="center">当在父表中删除&#x2F;更新对应记录时，首先检查该记录是否有对应外键，如果有则设置子表中该外键值为null。(前提是允许为null)</td>
+</tr>
+<tr>
+<td align="center">SET DEAFULT</td>
+<td align="center">Innodb不支持</td>
+</tr>
+</tbody></table>
+<h4 id="七、多表查询"><a href="#七、多表查询" class="headerlink" title="七、多表查询"></a>七、多表查询</h4><h5 id="7-1多表关系"><a href="#7-1多表关系" class="headerlink" title="7.1多表关系"></a>7.1多表关系</h5><p>​	三种关系：</p>
+<ul>
+<li>一对多或多对一</li>
+</ul>
+<p>​	部门和员工，部门是一，员工是多。员工表中包含部门Id的外键。</p>
+<ul>
+<li>多对多</li>
+</ul>
+<p>​	课程和学生关系。建立第三张中间表，中间表中至少包含两个外键，分别关联两方。</p>
+<ul>
+<li><p>一对一</p>
+<p>多用于单表的拆分。在任意一方加入外键，关联另一方的主键，并且设置主键外键为唯一的(UNIQUE)。</p>
+</li>
+</ul>
+<h5 id="7-2多表查询"><a href="#7-2多表查询" class="headerlink" title="7.2多表查询"></a>7.2多表查询</h5><p>分类：</p>
+<p>连接查询</p>
+<p>​	内连接：查询A、B交集部分</p>
+<p>​	外连接</p>
+<p>​		左外连接：查询左表所有数据，以及两表交集部分</p>
+<p>​		右外连接：查询右表所有数据，以及两表交集部分</p>
+<p>​	自连接：当前表与自身的连接查询</p>
+<p>子查询</p>
+<h5 id="7-3内连接"><a href="#7-3内连接" class="headerlink" title="7.3内连接"></a>7.3内连接</h5><p>隐式内连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段名from 表1，表2where 条件;</span><br></pre></td></tr></table></figure>
+
+<p>显式内连接</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段名from 表1  [inner] join 表2on 连接条件</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-4外连接"><a href="#7-4外连接" class="headerlink" title="7.4外连接"></a>7.4外连接</h5><ul>
+<li>左外连接</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段列表from 表1 left [outer] join 表2on 连接条件</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>右外连接</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段列表from 表1 right [outer] join 表2on 连接条件</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-5自连接"><a href="#7-5自连接" class="headerlink" title="7.5自连接"></a>7.5自连接</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段列表from 表1 别名A join 表1 别名Bon 连接条件</span><br></pre></td></tr></table></figure>
+
+<h5 id="7-6联合查询"><a href="#7-6联合查询" class="headerlink" title="7.6联合查询"></a>7.6联合查询</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select 字段列表 from 表A···union [all]select 字段列表 from 表B···</span><br></pre></td></tr></table></figure>
+
+<p>把多次查询结果合并起来，形成一个新的查询结果集。</p>
+<blockquote>
+<p>查询列数必须一致，字段类型必须一致。</p>
+</blockquote>
+<h5 id="7-7子查询"><a href="#7-7子查询" class="headerlink" title="7.7子查询"></a>7.7子查询</h5><p>SQL语句中嵌套select语句，就称为子查询。</p>
+<p>子查询外部的SQL语句可以是select&#x2F;insert&#x2F;update&#x2F;delete中任意一个</p>
+<p>根据子查询结果的不同，分为：</p>
+<p>​	标量子查询(子查询结果为单个值)</p>
+<p>​	列子查询(查询结果为一列)</p>
+<p>​	行子查询(子查询结果为一行)</p>
+<p>​	表子查询(查询结果为多行多列)</p>
+<h6 id="1-标量子查询"><a href="#1-标量子查询" class="headerlink" title="(1)标量子查询"></a>(1)<strong>标量子查询</strong></h6><p>子查询返回的结果是单个值(数字、字符串、日期等)，这种子查询称为标量子查询。</p>
+<p>常用的操作符：&#x3D; &lt;&gt; &gt;  &gt;&#x3D; &lt; &lt;&#x3D;</p>
+<h6 id="2-列子查询"><a href="#2-列子查询" class="headerlink" title="(2)列子查询"></a>(2)列子查询</h6><p>子查询返回的结果是一列(可以是多行)，这种子查询称为列子查询。</p>
+<p>常用的操作符：IN  NOT IN ANY  SOME ALL</p>
+<p>ANY:子查询返回列表中，有任意一个满足即可。</p>
+<p>SOME：与ANY等同。</p>
+<p>ALL：子查询返回列表中所有值都必须满足。</p>
+<h6 id="3-行子查询"><a href="#3-行子查询" class="headerlink" title="(3)行子查询"></a>(3)行子查询</h6><p>子查询返回的结果是一行(可以是多列)，这种子查询称为行子查询。</p>
+<p>常用的操作符：&#x3D; &lt;&gt; IN、NOT IN</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#查询与zhangsan薪资和直属领导相同的员工信息select salary, managerid from emp where name=&#x27;zhangsan&#x27;;select * from emp where (salary,managerid) = (select salary, managerid from emp where name=&#x27;zhangsan&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h6 id="4-表子查询"><a href="#4-表子查询" class="headerlink" title="(4)表子查询"></a>(4)表子查询</h6><p>子查询返回的结果是多行多列，这种子查询称为表子查询。</p>
+<p>常用操作符：IN</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#查询与张三、李四职位和薪资相同的员工信息select job,salary from emp where name=&#x27;张三&#x27; or name = &#x27;李四&#x27;;select * from emp where (job,salary) in (select job,salary from emp where name=&#x27;张三&#x27; or name = &#x27;李四&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="八、事务"><a href="#八、事务" class="headerlink" title="八、事务"></a>八、事务</h4><h5 id="8-1事务概念"><a href="#8-1事务概念" class="headerlink" title="8.1事务概念"></a>8.1事务概念</h5><p>事务：事务是一个或多个SQL语句组成的执行单元，事务会把所有的操作作为一个整体一起向系统提交或撤销操作请求，即这些操作要么同时成功，要么同时失败。</p>
+<p>MySQL的事务是自动提交的，当执行一条DML语句，MySQL会隐式的立即提交事务。</p>
+<h5 id="8-2事务操作"><a href="#8-2事务操作" class="headerlink" title="8.2事务操作"></a>8.2事务操作</h5><p>查看事务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select @@autocommit;</span><br></pre></td></tr></table></figure>
+
+<p>设置手动提交事务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set @@autocommit = 0;</span><br></pre></td></tr></table></figure>
+
+<p>开启事务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">begin 或 start transaction;  #显式的开启事务</span><br></pre></td></tr></table></figure>
+
+<p>提交事务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">commit</span><br></pre></td></tr></table></figure>
+
+<p>回滚事务</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rollback</span><br></pre></td></tr></table></figure>
+
+<h5 id="8-3事务四大特性"><a href="#8-3事务四大特性" class="headerlink" title="8.3事务四大特性"></a>8.3事务四大特性</h5><p>ACID</p>
+<p>原子性</p>
+<p>一致性</p>
+<p>隔离性</p>
+<p>持久性</p>
+<h5 id="8-4并发事务问题"><a href="#8-4并发事务问题" class="headerlink" title="8.4并发事务问题"></a>8.4并发事务问题</h5><p>脏读、不可重复读、幻读</p>
+<p>脏读：一个事务读取到另一个事务还没有提交的数据。</p>
+<p>不可重复读：一个事务先后读取同一条记录，但两次读取的数据不同。</p>
+<p>幻读：一个事务按照条件查询数据时，没有对应的数据行，但是在插入数据时，这条数据已经存在，好像出现了“幻影”。</p>
+<h5 id="8-5事务的隔离级别"><a href="#8-5事务的隔离级别" class="headerlink" title="8.5事务的隔离级别"></a>8.5事务的隔离级别</h5><p>读未提交</p>
+<p>读已提交</p>
+<p>可重复读</p>
+<p>串行化</p>
+<p>查看事务隔离级别</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select @@transaction_isolation;</span><br></pre></td></tr></table></figure>
+
+<p>设置事务隔离级别</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set [session|global] transaction isolation level &#123;隔离级别&#125;</span><br></pre></td></tr></table></figure>
+
 
                 
             </div>
@@ -502,7 +837,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://wangxw0326.github.io/2022/04/28/hello-world/">https://wangxw0326.github.io/2022/04/28/hello-world/</a>
+                    <a href="https://wangxw0326.github.io/2022/04/29/MySQL%E5%9F%BA%E7%A1%80/">https://wangxw0326.github.io/2022/04/29/MySQL%E5%9F%BA%E7%A1%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -711,9 +1046,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/04/29/MySQL%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
@@ -731,9 +1067,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-04-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-04-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -742,6 +1078,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -749,7 +1086,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2022/04/28/hello-world/">
@@ -779,7 +1116,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
